@@ -1,9 +1,11 @@
 /* Custom theme */
 #about #profile-picture {
   border: 3px solid #fff;
-  border-radius: 125px 125px;
+  border-radius: 150px 150px;
   margin-bottom: 20px;
   margin-top: 10px;
+  height: 300px;
+  width: 300px;
 }
 #contact {
   padding-bottom: 250px;
