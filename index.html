@@ -63,7 +63,12 @@
 </head>
 <body>
     <div class="container">
-        <img class="image" src="Logo.png" alt="Coming Soon" />
+        <picture>
+            <!-- Use higher-resolution image for 4k screens -->
+            <source srcset="Logo.png" media="(min-width: 2560px)">
+            <!-- Default image for other screens -->
+            <img class="image" src="Logo.png" alt="Coming Soon" />
+        </picture>
         <div class="button-group">
             <a href="https://twitter.com/TyrannicalGames" target="_blank">Follow us on Twitter</a>
             <a href="https://github.com/Ershany/Arcane-Engine" target="_blank">Arcane Engine GitHub</a>
