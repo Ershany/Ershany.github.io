@@ -1,0 +1,232 @@
+:root {
+    --bg: #0a0a0a;
+    --red: #8b0d0d;
+    --red-light: #b02121;
+    --text: #e0e0e0;
+    --accent: #d0c6b2;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 0.75rem 2rem;
+    border-bottom: 2px solid var(--red);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo img {
+    height: 50px;
+}
+.logo h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav-links a:hover {
+    color: var(--red-light);
+}
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--red-light);
+}
+
+/* Hero Section */
+.hero {
+    background: radial-gradient(circle at center, rgba(139, 13, 13, 0.25), var(--bg) 80%), url('assets/blood_texture.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 6rem 1rem;
+    color: var(--accent);
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    margin-bottom: 2rem;
+}
+.btn {
+    background: var(--red);
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: var(--red-light);
+}
+
+/* Games Section */
+.games-section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.games-section h2 {
+    font-family: 'Cinzel', serif;
+	font-size: 2rem;
+    color: var(--accent);
+}
+.game-card {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.gallery img {
+    width: 30%;
+    border-radius: 8px;
+    border: 2px solid var(--red);
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* News Section */
+.news-section {
+    padding: 4rem 1rem;
+    background: #111;
+    text-align: center;
+}
+.news-section h2 {
+    font-family: 'Cinzel', serif;
+	font-size: 2rem;
+    color: var(--accent);
+}
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.news-card {
+    background: #1a1a1a;
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px var(--red-light);
+}
+.news-card img,
+.news-card video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0.75rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img,
+.news-card:hover video {
+    transform: scale(1.03);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.contact-section h2 {
+    font-family: 'Cinzel', serif;
+	font-size: 2rem;
+    color: var(--accent);
+}
+.socials {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.socials a {
+    color: var(--red-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+.socials a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid var(--red);
+    padding: 1rem;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .gallery img {
+        width: 80%;
+    }
+}

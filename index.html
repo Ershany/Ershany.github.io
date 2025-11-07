@@ -1,81 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="google-site-verification" content="C1lL4eZcV0p_DxPZOyGj8Tz54nOowDtDxt1geW3Ko0U" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyrannical Games</title>
-    <link rel="icon" type="image/png" href="Favicon.png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-
-        .container {
-            position: relative;
-            text-align: center;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .image {
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .button-group {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .button-group a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px 20px;
-            background-color: rgb(158, 26, 27);
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        .button-group a:hover {
-            background-color: rgb(128, 0, 0);
-            transform: scale(1.1);
-        }
-
-        .about-image {
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .button-group a {
-                font-size: 16px;
-            }
-        }
-    </style>
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+	<link rel="shortcut icon" href="assets/Favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <picture>
-            <!-- Use higher-resolution image for 4k screens -->
-            <source srcset="Logo.png" media="(min-width: 2560px)">
-            <!-- Default image for other screens -->
-            <img class="image" src="Logo.png" alt="Coming Soon" />
-        </picture>
-        <div class="button-group">
-            <a href="https://twitter.com/TyrannicalGames" target="_blank">Follow us on Twitter</a>
-            <a href="https://github.com/Ershany/Arcane-Engine" target="_blank">Arcane Engine GitHub</a>
-            <a href="https://www.patreon.com/user?u=56529636" target="_blank">Development Patreon</a>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Tyrannical Games Logo">
+            <h1>Tyrannical Games</h1>
         </div>
-        <img class="about-image" src="About.png" alt="About" />
-    </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Forged in Blood and Code</h2>
+            <p>Tyrannical Games was founded by ex-Rockstar Games developers with one mission — to craft unique indie experiences unafraid of innovation, depth, and bold worlds.</p>
+            <a href="#games" class="btn">Explore The Lord's Sanguine</a>
+        </div>
+    </section>
+
+    <section id="games" class="games-section">
+        <h2>Our Games</h2>
+        <div class="game-card">
+            <h3>The Lord’s Sanguine</h3>
+            <p>A dark, atmospheric journey through a cursed land where every decision bleeds consequence. The Lord's Sanguine is an action RPG with Roguelite mechanics and colony simulation. Deep mechanics. Brutal choices. True immersion.</p>
+            <div class="gallery">
+                <img src="assets/LordsSanguine/Cover_Art_2.png" alt="Screenshot 1">
+                <img src="assets/LordsSanguine/Text_Logo.png" alt="Screenshot 2">
+                <img src="assets/LordsSanguine/Wolf_Art2.png" alt="Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-grid">
+            <article class="news-card">
+				<video autoplay muted loop playsinline>
+					<source src="assets/MovementClip.mp4" type="video/mp4">
+				</video>
+                <h3>Dev Update #1</h3>
+				<p>We've begun work on the movement systems for the player character. This includes wall sliding, grabbing ledges, and rolling!</p>
+            </article>
+            <article class="news-card">
+				<img src="assets/TyrannicalGames_Resized16x9.png" alt="Studio Launch">
+                <h3>Studio Launch</h3>
+                <p>Tyrannical Games officially opens its doors. Formed by ex-Rockstar Games employees, we aim to create unforgettable worlds and mechanics.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Got questions, press inquiries, or partnership ideas? Reach out to us:</p>
+        <p><a href="mailto:bradytyrannical@outlook.com">bradytyrannical@outlook.com</a></p>
+        <div class="socials">
+            <a href="https://x.com/TyrannicalGames">Twitter</a>
+            <a href="https://www.youtube.com/@TyrannicalGames">YouTube</a>
+            <a href="https://discord.gg/vkxXFNTVEf">Discord</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Tyrannical Games. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
