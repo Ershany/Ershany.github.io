@@ -129,6 +129,11 @@ body {
     max-width: 900px;
     margin: 2rem auto;
 }
+.game-card h3 {
+    font-family: 'Cinzel', serif;
+	font-size: 2rem;
+    color: var(--accent);
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -210,12 +215,19 @@ body {
     gap: 1rem;
 }
 .socials a {
-    color: var(--red-light);
+    color: #ff3333; /* bright red */
     text-decoration: none;
     font-weight: bold;
 }
 .socials a:hover {
     text-decoration: underline;
+}
+
+/* Helper classes */
+.red-accent {
+    color: #ff3333; /* bright red */
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
 }
 
 /* Footer */
