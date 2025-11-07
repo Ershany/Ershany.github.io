@@ -230,24 +230,18 @@ body {
 /* Smaller screen overrides (mobile) */
 @media (max-width: 768px) {
     .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        background: #111;
-        flex-direction: column;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        pointer-events: none; /* Prevent clicks when hidden */
-    }
-    .nav-links.active {
-        opacity: 1;
-        max-height: 500px; /* big enough to fit your menu */
-        pointer-events: auto;
-    }
+		display: none;
+		flex-direction: column;
+		background: #111;
+		position: absolute;
+		top: 70px;
+		right: 0;
+		width: 200px;
+		padding: 1rem; 
+	}
+	.nav-links.active {
+		display: flex;
+	}
     .nav-links a {
         display: block;
         width: 100%;
