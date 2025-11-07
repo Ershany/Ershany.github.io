@@ -65,12 +65,27 @@ body {
 
 /* Hero Section */
 .hero {
-    background: radial-gradient(circle at center, rgba(139, 13, 13, 0.25), var(--bg) 80%), url('assets/blood_texture.jpg');
+    position: relative;
+    background:
+        radial-gradient(circle at center,
+            rgba(139, 13, 13, 0.4) 0%,
+            rgba(0, 0, 0, 0.95) 85%),
+        url('assets/blood_texture.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 6rem 1rem;
     color: var(--accent);
+    overflow: hidden;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/CfHgAFuwJ/FnYjOQAAAABJRU5ErkJggg==");
+    opacity: 0.12;
+    mix-blend-mode: overlay;
 }
 .hero-content {
     max-width: 800px;
