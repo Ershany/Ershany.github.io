@@ -292,4 +292,27 @@ body {
     .gallery::-webkit-scrollbar {
         display: none;
     }
+	
+	.news-grid {
+        flex-wrap: nowrap;
+		justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding: 0.5rem 0 1rem;
+    }
+
+    .news-grid article {
+        flex: 0 0 80%; /* each image takes ~80% of viewport width */
+        max-width: none;
+        scroll-snap-align: center;
+        border-radius: 12px;
+    }
+
+    /* Hide scrollbar for a cleaner look */
+    .news-grid::-webkit-scrollbar {
+        display: none;
+    }
 }
