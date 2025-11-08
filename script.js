@@ -11,3 +11,24 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     navLinks.classList.remove('active');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const gallery = document.querySelector('.gallery');
+    
+    // Only apply this on mobile screens
+    if (gallery && window.innerWidth <= 768) {
+        const images = gallery.querySelectorAll('img');
+        if (images.length >= 2) {
+            const secondImage = images[1];
+            const scrollPosition =
+                secondImage.offsetLeft -
+                (gallery.clientWidth / 2) +
+                (secondImage.clientWidth / 2);
+
+            gallery.scrollTo({
+                left: scrollPosition,
+                behavior: 'instant' // change to 'smooth' if you want it animated
+            });
+        }
+    }
+});
