@@ -305,7 +305,7 @@ body {
     }
 
     .news-grid article {
-        flex: 0 0 90%; /* each image takes ~80% of viewport width */
+        flex: 0 0 85%; /* each image takes ~80% of viewport width */
         max-width: none;
         scroll-snap-align: center;
         border-radius: 12px;
