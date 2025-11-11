@@ -12,6 +12,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+/*
+// This is code that on mobile will center the horizontal scroll bar for the images for The Lord's Sanguine section
 document.addEventListener("DOMContentLoaded", function() {
     const gallery = document.querySelector('.gallery');
     
@@ -32,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+*/
